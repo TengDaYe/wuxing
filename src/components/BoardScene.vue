@@ -9,9 +9,9 @@
       @mouseup="handleMouseUp"
     ></canvas>
     <div class="grid-overlay">
-      <template v-for="(row, rowIndex) in 8" :key="row">
+      <template v-for="(_, rowIndex) in 8" :key="rowIndex">
         <div
-          v-for="(col, colIndex) in 8"
+          v-for="(_, colIndex) in 8"
           :key="`${rowIndex}-${colIndex}`"
           :style="{
             left: colIndex * 60 + 'px',
@@ -190,20 +190,9 @@ const descriptionMap: Record<ElementType, string> = {
 
 const flatCells = computed(() => cells.value);
 
-const getFillColor = (rowIndex: number, colIndex: number): string => {
+const getFillColor = (rowIndex: number, _colIndex: number): string => {
   const colors = ['#4CAF50', '#FF9800', '#F44336', '#2196F3', '#9E9E9E'];
   return colors[rowIndex % 5];
-};
-
-const getTextColor = (bgColor: string): string => {
-  const contrastColors: Record<string, string> = {
-    '#4CAF50': '#409840',
-    '#F44336': '#ff2e15',
-    '#FF9800': '#cc7c00',
-    '#9E9E9E': '#5f5f5f',
-    '#2196F3': '#0077b6',
-  };
-  return contrastColors[bgColor] || '#409840';
 };
 
 const handleMouseDown = (e: MouseEvent): void => {

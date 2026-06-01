@@ -33,9 +33,8 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, ref, onMounted, onUnmounted } from 'vue';
+import { nextTick, ref, onMounted } from 'vue';
 import { eventEmitter, GameEvents } from '../utils/EventManager';
-import { GameConfig } from '../data/GameConfig';
 import GameStoreClass from '../store/game';
 
 const emit = defineEmits(['start-game']);

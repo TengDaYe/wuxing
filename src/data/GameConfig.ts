@@ -49,12 +49,6 @@ export const GameConfig = {
       metal: 'wood',
     },
   },
-  
-  // 类型定义
-  WUXING_TYPE: {
-    Element: 'wood' | 'fire' | 'earth' | 'metal' | 'water',
-  },
-  
   // 性能配置
   PERFORMANCE: {
     HIGH: { particleCount: 100, animationFPS: 60 },
@@ -119,8 +113,10 @@ export interface ClickData {
 // 场景类型
 export type SceneType = 'Menu' | 'LevelSelect' | 'Game' | 'GameOver';
 
+export type WuxingElement = typeof GameConfig.WUXING.ELEMENTS[number];
+
 // 游戏场景配置
-interface SceneConfig {
+export interface SceneConfig {
   level: number;
   stage: number;
   score: number;

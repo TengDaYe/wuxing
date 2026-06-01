@@ -1,7 +1,25 @@
 {
   "name": "xiaoshou-legend-web",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
+  "description": "An open-source Vue and TypeScript browser game prototype inspired by the Chinese five elements.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TengDaYe/wuxing.git"
+  },
+  "homepage": "https://github.com/TengDaYe/wuxing#readme",
+  "bugs": {
+    "url": "https://github.com/TengDaYe/wuxing/issues"
+  },
+  "keywords": [
+    "wuxing",
+    "vue",
+    "typescript",
+    "vite",
+    "browser-game",
+    "match-game"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",

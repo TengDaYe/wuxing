@@ -4,7 +4,6 @@
 
 import { reactive, toRefs } from 'vue';
 import { GameConfig } from '../data/GameConfig';
-import { GameEvents } from '../utils/EventManager';
 
 export default class GameStore {
   // 响应式游戏状态
